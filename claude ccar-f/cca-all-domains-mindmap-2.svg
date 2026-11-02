@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1600" viewBox="0 0 1500 1600" role="img" font-family="Helvetica, Arial, sans-serif">
+<title>CCA exam mind map: all five domains</title>
+<desc>The CCA exam at the centre with five domain branches, each with its weight, six key rules, the common trap and the current official docs note; plus the meta-pattern, the six exam scenarios and exam trigger words.</desc>
+<rect width="1500" height="1600" fill="#FFFFFF"/>
+<g stroke="#B4B2A9" stroke-width="1.25">
+<line x1="600" y1="390" x2="250" y2="330"/>
+<line x1="750" y1="370" x2="750" y2="330"/>
+<line x1="900" y1="390" x2="1250" y2="330"/>
+<line x1="650" y1="450" x2="500" y2="494"/>
+<line x1="850" y1="450" x2="1000" y2="494"/>
+</g>
+<rect x="600" y="370" width="300" height="80" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="750" y="402" font-size="19" fill="#3C3489" font-weight="700" text-anchor="middle">CCA exam</text>
+<text x="750" y="426" font-size="13" fill="#534AB7" text-anchor="middle">5 domains · 4 of 6 scenarios picked</text>
+<rect x="30" y="30" width="440" height="300" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+<text x="50" y="62" font-size="16" fill="#085041" font-weight="700">D1 Agentic architecture</text>
+<text x="450" y="62" font-size="12.5" fill="#0F6E56" font-weight="700" text-anchor="end">27%  ·  1.1–1.7</text>
+<text x="50" y="96" font-size="13.5" fill="#0F6E56">• Loop: stop on end_turn; tool_use → run every tool</text>
+<text x="50" y="118" font-size="13.5" fill="#0F6E56">• Assistant message first, all results in ONE message</text>
+<text x="50" y="140" font-size="13.5" fill="#0F6E56">• Cut-off call → don't run it; failed tool → is_error</text>
+<text x="50" y="162" font-size="13.5" fill="#0F6E56">• Hub-and-spoke; subagents see only what's passed</text>
+<text x="50" y="184" font-size="13.5" fill="#0F6E56">• Pass structured JSON with sources, not plain text</text>
+<text x="50" y="206" font-size="13.5" fill="#0F6E56">• Parallel subagents = several calls in ONE turn</text>
+<text x="50" y="228" font-size="13.5" fill="#0F6E56">• Must / never → hook (Pre blocks, Post cleans)</text>
+<text x="50" y="250" font-size="13.5" fill="#0F6E56">• Valid → resume · two paths → fork · stale → fresh</text>
+<line x1="50" y1="266" x2="450" y2="266" stroke="#5DCAA5" stroke-width="0.75"/>
+<text x="50" y="288" font-size="13.5" fill="#A32D2D"><tspan font-weight="700">Trap:</tspan> "Task complete" text check; rules in the prompt</text>
+<text x="50" y="310" font-size="13.5" fill="#3C3489"><tspan font-weight="700">Now:</tspan> spawn tool is Agent; read ResultMessage.subtype</text>
+<rect x="530" y="30" width="440" height="300" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="550" y="62" font-size="16" fill="#0C447C" font-weight="700">D2 Tool design &amp; MCP</text>
+<text x="950" y="62" font-size="12.5" fill="#185FA5" font-weight="700" text-anchor="end">18%  ·  2.1–2.3</text>
+<text x="550" y="96" font-size="13.5" fill="#185FA5">• Descriptions route: what, input, output, when / not</text>
+<text x="550" y="118" font-size="13.5" fill="#185FA5">• Empty result ≠ error (isError: false)</text>
+<text x="550" y="140" font-size="13.5" fill="#185FA5">• transient → retry · validation → fix the input</text>
+<text x="550" y="162" font-size="13.5" fill="#185FA5">• business → escalate · permission → credentials</text>
+<text x="550" y="184" font-size="13.5" fill="#185FA5">• Split by data source; &gt;5% misroutes → split</text>
+<text x="550" y="206" font-size="13.5" fill="#185FA5">• Prompt echoes a tool name → reword the prompt</text>
+<text x="550" y="228" font-size="13.5" fill="#185FA5">• 4–5 tools per role; synthesis gets no web search</text>
+<text x="550" y="250" font-size="13.5" fill="#185FA5">• Forced tool_choice for fixed steps; strict: true</text>
+<line x1="550" y1="266" x2="950" y2="266" stroke="#85B7EB" stroke-width="0.75"/>
+<text x="550" y="288" font-size="13.5" fill="#A32D2D"><tspan font-weight="700">Trap:</tspan> empty result on timeout; every tool for every agent</text>
+<text x="550" y="310" font-size="13.5" fill="#3C3489"><tspan font-weight="700">Now:</tspan> MCP spec: only isError; forced choice 400 on 5.5</text>
+<rect x="1030" y="30" width="440" height="300" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="1050" y="62" font-size="16" fill="#633806" font-weight="700">D3 Claude Code config</text>
+<text x="1450" y="62" font-size="12.5" fill="#854F0B" font-weight="700" text-anchor="end">20%  ·  3.1–3.6</text>
+<text x="1050" y="96" font-size="13.5" fill="#854F0B">• CLAUDE.md layers: ~/.claude → root → subdirectory</text>
+<text x="1050" y="118" font-size="13.5" fill="#854F0B">• Shared rules at root, stack rules in subfolders</text>
+<text x="1050" y="140" font-size="13.5" fill="#854F0B">• Plan mode: 10+ files, migrations, auth, deletions</text>
+<text x="1050" y="162" font-size="13.5" fill="#854F0B">• Repeatable workflow → slash command / skill</text>
+<text x="1050" y="184" font-size="13.5" fill="#854F0B">• Every-time action → hook (PostToolUse lint)</text>
+<text x="1050" y="206" font-size="13.5" fill="#854F0B">• CI: claude -p · --output-format json · --max-turns</text>
+<text x="1050" y="228" font-size="13.5" fill="#854F0B">• CI: no prompts (acceptEdits), specific criteria</text>
+<text x="1050" y="250" font-size="13.5" fill="#854F0B">• False positives → safe list in CLAUDE.md; keep checks</text>
+<line x1="1050" y1="266" x2="1450" y2="266" stroke="#EF9F27" stroke-width="0.75"/>
+<text x="1050" y="288" font-size="13.5" fill="#A32D2D"><tspan font-weight="700">Trap:</tspan> one root CLAUDE.md; default mode in CI</text>
+<text x="1050" y="310" font-size="13.5" fill="#3C3489"><tspan font-weight="700">Now:</tspan> CLAUDE.md files combine; dontAsk for CI; --bare</text>
+<rect x="280" y="494" width="440" height="300" rx="10" fill="#FBEAF0" stroke="#993556" stroke-width="1"/>
+<text x="300" y="526" font-size="16" fill="#72243E" font-weight="700">D4 Prompts &amp; structured output</text>
+<text x="700" y="526" font-size="12.5" fill="#993556" font-weight="700" text-anchor="end">20%  ·  4.1–4.5</text>
+<text x="300" y="560" font-size="13.5" fill="#993556">• Schema compliance → strict: true / JSON outputs</text>
+<text x="300" y="582" font-size="13.5" fill="#993556">• Unknown value → null; never omit the field</text>
+<text x="300" y="604" font-size="13.5" fill="#993556">• Retry feedback: field, problem, bad value, expected</text>
+<text x="300" y="626" font-size="13.5" fill="#993556">• Retries used up → requires_human_review, never drop</text>
+<text x="300" y="648" font-size="13.5" fill="#993556">• Few-shot = format, style, ambiguity (3–5 examples)</text>
+<text x="300" y="670" font-size="13.5" fill="#993556">• Batch: ~50% off, up to 24 h, no SLA, nobody waiting</text>
+<text x="300" y="692" font-size="13.5" fill="#993556">• Test a sample before a big batch; match custom_id</text>
+<text x="300" y="714" font-size="13.5" fill="#993556">• Long-document review: extract → verify → score</text>
+<line x1="300" y1="730" x2="700" y2="730" stroke="#ED93B1" stroke-width="0.75"/>
+<text x="300" y="752" font-size="13.5" fill="#A32D2D"><tspan font-weight="700">Trap:</tspan> "invalid, try again"; Batch for blocking steps</text>
+<text x="300" y="774" font-size="13.5" fill="#3C3489"><tspan font-weight="700">Now:</tspan> output_config.format; prefill = 400 on 4.6+</text>
+<rect x="780" y="494" width="440" height="300" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+<text x="800" y="526" font-size="16" fill="#712B13" font-weight="700">D5 Context &amp; reliability</text>
+<text x="1200" y="526" font-size="12.5" fill="#993C1D" font-weight="700" text-anchor="end">15%  ·  5.1–5.5</text>
+<text x="800" y="560" font-size="13.5" fill="#993C1D">• Lost in the middle → per-section + integration pass</text>
+<text x="800" y="582" font-size="13.5" fill="#993C1D">• Long chats → rolling summary + recent turns verbatim</text>
+<text x="800" y="604" font-size="13.5" fill="#993C1D">• Escalate on rules: limits, missing data, error count</text>
+<text x="800" y="626" font-size="13.5" fill="#993C1D">• Handoff: identity, issue, actions, reason, next step</text>
+<text x="800" y="648" font-size="13.5" fill="#993C1D">• Every claim: source ID, URL, date; state the gaps</text>
+<text x="800" y="670" font-size="13.5" fill="#993C1D">• Isolate per-item failures; circuit breaker</text>
+<text x="800" y="692" font-size="13.5" fill="#993C1D">• Check accuracy per doc type before cutting review</text>
+<text x="800" y="714" font-size="13.5" fill="#993C1D">• Cache a byte-stable prefix (no timestamps inside)</text>
+<line x1="800" y1="730" x2="1200" y2="730" stroke="#F0997B" stroke-width="0.75"/>
+<text x="800" y="752" font-size="13.5" fill="#A32D2D"><tspan font-weight="700">Trap:</tspan> bigger window; "70% confident"; sentiment routing</text>
+<text x="800" y="774" font-size="13.5" fill="#3C3489"><tspan font-weight="700">Now:</tspan> 'context rot'; 4 breakpoints; 5 min / 1 h TTL</text>
+<rect x="30" y="830" width="700" height="232" rx="10" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<text x="50" y="862" font-size="16" fill="#2C2C2A" font-weight="700">Meta-pattern: deterministic beats probabilistic</text>
+<text x="50" y="892" font-size="13" fill="#5F5E5A" font-weight="700">Task</text>
+<text x="250" y="892" font-size="13" fill="#5F5E5A" font-weight="700">Wrong (probabilistic)</text>
+<text x="480" y="892" font-size="13" fill="#5F5E5A" font-weight="700">Right (deterministic)</text>
+<line x1="50" y1="902" x2="710" y2="902" stroke="#B4B2A9" stroke-width="0.75"/>
+<text x="50" y="926" font-size="13.5" fill="#2C2C2A">Tool ordering</text>
+<text x="250" y="926" font-size="13.5" fill="#A32D2D">Few-shot examples</text>
+<text x="480" y="926" font-size="13.5" fill="#0F6E56" font-weight="700">Prerequisite hooks</text>
+<text x="50" y="948" font-size="13.5" fill="#2C2C2A">Escalation</text>
+<text x="250" y="948" font-size="13.5" fill="#A32D2D">Self-reported confidence</text>
+<text x="480" y="948" font-size="13.5" fill="#0F6E56" font-weight="700">Rule-based triggers</text>
+<text x="50" y="970" font-size="13.5" fill="#2C2C2A">Schema compliance</text>
+<text x="250" y="970" font-size="13.5" fill="#A32D2D">Prompt instructions</text>
+<text x="480" y="970" font-size="13.5" fill="#0F6E56" font-weight="700">strict: true + JSON schema</text>
+<text x="50" y="992" font-size="13.5" fill="#2C2C2A">Loop termination</text>
+<text x="250" y="992" font-size="13.5" fill="#A32D2D">Parsing the text</text>
+<text x="480" y="992" font-size="13.5" fill="#0F6E56" font-weight="700">stop_reason</text>
+<text x="50" y="1014" font-size="13.5" fill="#2C2C2A">Error recovery</text>
+<text x="250" y="1014" font-size="13.5" fill="#A32D2D">Retry everything</text>
+<text x="480" y="1014" font-size="13.5" fill="#0F6E56" font-weight="700">isRetryable flag</text>
+<text x="50" y="1044" font-size="13" fill="#5F5E5A">Also wrong: a bigger window · Batch for everything · all tools to all agents</text>
+<rect x="770" y="830" width="700" height="232" rx="10" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<text x="790" y="862" font-size="16" fill="#2C2C2A" font-weight="700">The 6 exam scenarios (4 are picked)</text>
+<text x="790" y="892" font-size="13.5" fill="#2C2C2A" font-weight="700">1 Customer support agent</text>
+<text x="990" y="892" font-size="13" fill="#534AB7" font-weight="700">D1 D2 D5</text>
+<text x="1075" y="892" font-size="13.5" fill="#444441">prerequisite hook, rule escalation</text>
+<text x="790" y="914" font-size="13.5" fill="#2C2C2A" font-weight="700">2 Code generation</text>
+<text x="990" y="914" font-size="13" fill="#534AB7" font-weight="700">D3 D5</text>
+<text x="1075" y="914" font-size="13.5" fill="#444441">CLAUDE.md layers, plan mode, fresh vs resume</text>
+<text x="790" y="936" font-size="13.5" fill="#2C2C2A" font-weight="700">3 Multi-agent research</text>
+<text x="990" y="936" font-size="13" fill="#534AB7" font-weight="700">D1 D2 D5</text>
+<text x="1075" y="936" font-size="13.5" fill="#444441">parallel, provenance, re-delegate gaps</text>
+<text x="790" y="958" font-size="13.5" fill="#2C2C2A" font-weight="700">4 Developer productivity</text>
+<text x="990" y="958" font-size="13" fill="#534AB7" font-weight="700">D1 D2 D3</text>
+<text x="1075" y="958" font-size="13.5" fill="#444441">tools by phase, adaptive decomposition</text>
+<text x="790" y="980" font-size="13.5" fill="#2C2C2A" font-weight="700">5 Claude Code in CI/CD</text>
+<text x="990" y="980" font-size="13" fill="#534AB7" font-weight="700">D3 D4</text>
+<text x="1075" y="980" font-size="13.5" fill="#444441">-p JSON, safe list, good/bad examples</text>
+<text x="790" y="1002" font-size="13.5" fill="#2C2C2A" font-weight="700">6 Structured extraction</text>
+<text x="990" y="1002" font-size="13" fill="#534AB7" font-weight="700">D4 D5</text>
+<text x="1075" y="1002" font-size="13.5" fill="#444441">specific retries, sections, Batch fit</text>
+<text x="790" y="1044" font-size="13" fill="#5F5E5A">Study 1, 3 and 4 hardest: they cover D1 + D2 (45% of the exam)</text>
+<rect x="30" y="1092" width="700" height="240" rx="10" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<text x="50" y="1124" font-size="16" fill="#2C2C2A" font-weight="700">Key numbers to memorize</text>
+<text x="50" y="1156" font-size="13.5" fill="#5F5E5A">Domain weights</text>
+<text x="190" y="1156" font-size="13.5" fill="#2C2C2A" font-weight="700">27 · 18 · 20 · 20 · 15 %</text>
+<text x="390" y="1156" font-size="13.5" fill="#5F5E5A">Batch</text>
+<text x="530" y="1156" font-size="13.5" fill="#2C2C2A" font-weight="700">~50% off, ≤ 24 h (most &lt; 1 h)</text>
+<text x="50" y="1178" font-size="13.5" fill="#5F5E5A">Tools per agent</text>
+<text x="190" y="1178" font-size="13.5" fill="#2C2C2A" font-weight="700">4–5</text>
+<text x="390" y="1178" font-size="13.5" fill="#5F5E5A">Batch size</text>
+<text x="530" y="1178" font-size="13.5" fill="#2C2C2A" font-weight="700">100k requests / 256 MB</text>
+<text x="50" y="1200" font-size="13.5" fill="#5F5E5A">Split a tool at</text>
+<text x="190" y="1200" font-size="13.5" fill="#2C2C2A" font-weight="700">&gt; 5% misroutes</text>
+<text x="390" y="1200" font-size="13.5" fill="#5F5E5A">Batch results kept</text>
+<text x="530" y="1200" font-size="13.5" fill="#2C2C2A" font-weight="700">29 days</text>
+<text x="50" y="1222" font-size="13.5" fill="#5F5E5A">Plan mode at</text>
+<text x="190" y="1222" font-size="13.5" fill="#2C2C2A" font-weight="700">10+ files</text>
+<text x="390" y="1222" font-size="13.5" fill="#5F5E5A">Cache TTL</text>
+<text x="530" y="1222" font-size="13.5" fill="#2C2C2A" font-weight="700">5 min (1.25×) or 1 h (2×)</text>
+<text x="50" y="1244" font-size="13.5" fill="#5F5E5A">Retry cap</text>
+<text x="190" y="1244" font-size="13.5" fill="#2C2C2A" font-weight="700">~3, then human review</text>
+<text x="390" y="1244" font-size="13.5" fill="#5F5E5A">Cache reads</text>
+<text x="530" y="1244" font-size="13.5" fill="#2C2C2A" font-weight="700">0.1× · max 4 breakpoints</text>
+<text x="50" y="1266" font-size="13.5" fill="#5F5E5A">Escalate when</text>
+<text x="190" y="1266" font-size="13.5" fill="#2C2C2A" font-weight="700">refund &gt; $500, errors &gt; 3</text>
+<text x="390" y="1266" font-size="13.5" fill="#5F5E5A">Few-shot</text>
+<text x="530" y="1266" font-size="13.5" fill="#2C2C2A" font-weight="700">3–5 examples</text>
+<text x="50" y="1288" font-size="13.5" fill="#5F5E5A">Circuit breaker</text>
+<text x="190" y="1288" font-size="13.5" fill="#2C2C2A" font-weight="700">5 failures, 60 s cool-down</text>
+<text x="390" y="1288" font-size="13.5" fill="#5F5E5A">CLAUDE.md</text>
+<text x="530" y="1288" font-size="13.5" fill="#2C2C2A" font-weight="700">under ~200 lines</text>
+<text x="50" y="1310" font-size="13.5" fill="#5F5E5A">Rolling summary</text>
+<text x="190" y="1310" font-size="13.5" fill="#2C2C2A" font-weight="700">at 40 msgs, keep last 20</text>
+<text x="390" y="1310" font-size="13.5" fill="#5F5E5A">Subagents (SDK)</text>
+<text x="530" y="1310" font-size="13.5" fill="#2C2C2A" font-weight="700">depth 3 · 20 at once</text>
+<rect x="770" y="1092" width="700" height="240" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="790" y="1124" font-size="16" fill="#3C3489" font-weight="700">How to answer a scenario question</text>
+<text x="790" y="1156" font-size="13.5" fill="#3C3489">1  Find the root cause, not the symptom</text>
+<text x="790" y="1178" font-size="13.5" fill="#3C3489">2  Hard rule (always / never / must)?  →  code: hook, strict, rule</text>
+<text x="790" y="1200" font-size="13.5" fill="#3C3489">3  Claude lacks information?  →  descriptions, context, sources</text>
+<text x="790" y="1222" font-size="13.5" fill="#3C3489">4  Who is waiting?  user → synchronous · nobody → Batch is fine</text>
+<text x="790" y="1244" font-size="13.5" fill="#3C3489">5  Irreversible or high-impact?  →  plan mode / human review</text>
+<text x="790" y="1266" font-size="13.5" fill="#3C3489">6  Prefer the narrowest fix: scope tools, isolate failures</text>
+<text x="790" y="1288" font-size="13.5" fill="#3C3489">7  Cross out: bigger model, bigger window, louder prompt</text>
+<text x="790" y="1310" font-size="13.5" fill="#3C3489" font-weight="700">8  Pick the deterministic, root-cause option</text>
+<rect x="30" y="1362" width="1440" height="176" rx="10" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<text x="50" y="1394" font-size="16" fill="#2C2C2A" font-weight="700">Exam trigger words</text>
+<text x="50" y="1426" font-size="13.5" fill="#444441">• "always / never / must"  →  hook or strict, not the prompt</text>
+<text x="770" y="1426" font-size="13.5" fill="#444441">• "no records found"  →  isError: false, not an error</text>
+<text x="50" y="1448" font-size="13.5" fill="#444441">• "before it runs", "block", "limit"  →  PreToolUse</text>
+<text x="770" y="1448" font-size="13.5" fill="#444441">• "user is waiting", "deadline"  →  synchronous, not Batch</text>
+<text x="50" y="1470" font-size="13.5" fill="#444441">• "inconsistent formats", "audit"  →  PostToolUse</text>
+<text x="770" y="1470" font-size="13.5" fill="#444441">• "misses the middle of a long doc"  →  per-section passes</text>
+<text x="50" y="1492" font-size="13.5" fill="#444441">• "independent but slow"  →  parallel calls in one turn</text>
+<text x="770" y="1492" font-size="13.5" fill="#444441">• "core assumption was wrong"  →  fresh session + summary</text>
+<text x="50" y="1514" font-size="13.5" fill="#444441">• "keeps calling the wrong tool"  →  fix the descriptions</text>
+<text x="770" y="1514" font-size="13.5" fill="#444441">• "40-file refactor", "migration"  →  plan mode first</text>
+<text x="470" y="1578" font-size="12.5" fill="#A32D2D" font-weight="700">Trap:</text>
+<text x="508" y="1578" font-size="12.5" fill="#5F5E5A">the common wrong answer</text>
+<text x="720" y="1578" font-size="12.5" fill="#3C3489" font-weight="700">Now:</text>
+<text x="756" y="1578" font-size="12.5" fill="#5F5E5A">current official docs (see each sheet's Latest SDK notes)</text>
+</svg>
